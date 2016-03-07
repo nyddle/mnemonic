@@ -4,7 +4,7 @@ import tornado.ioloop
 import tornado.web
 from tornroutes import route
 
-from NameGenerator import NameGenerator
+from NameGenerator import *
 
 
 @route(r"/")
