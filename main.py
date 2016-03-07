@@ -9,7 +9,8 @@ from NameGenerator import *
 
 
 templates = Environment(loader=FileSystemLoader('templates'))
-
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
+ng = NameGenerator()
 
 @route(r"/")
 class IndexHandler(tornado.web.RequestHandler):
@@ -22,6 +23,7 @@ class ShortenUrlHandler(tornado.web.RequestHandler):
     def post(self):
 
         name = self.get_argument('url', default=None, strip=True)
+        n = make_unique_name(name, ng, r)
 
         return self.write("OK")
 
