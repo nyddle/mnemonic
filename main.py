@@ -5,7 +5,7 @@ import tornado.web
 from tornroutes import route
 from jinja2 import Environment, FileSystemLoader
 
-from NameGenerator import NameGenerator
+from NameGenerator import *
 
 
 templates = Environment(loader=FileSystemLoader('templates'))
@@ -20,6 +20,9 @@ class IndexHandler(tornado.web.RequestHandler):
 @route(r"/shorten_url") 
 class ShortenUrlHandler(tornado.web.RequestHandler):
     def post(self):
+
+        name = self.get_argument('url', default=None, strip=True)
+
         return self.write("OK")
 
 
