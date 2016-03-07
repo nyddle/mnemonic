@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/env python
 from random import choice, seed as rseed
 import re
 import redis
@@ -67,3 +67,4 @@ if (__name__ == "__main__"):
 """
 coolish-kilometer
 """
+
