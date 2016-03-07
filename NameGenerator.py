@@ -7,26 +7,20 @@ class NameGenerator(object):
     adjectives = []
 
     def get_name(self):
-	    if seed:
-		rseed(seed)
 
-	    if tokenhex:
-		tokenchars = '0123456789abcdef'
+        adjective = choice(self.adjectives)
+        noun = choice(self.nouns)
 
-	    adjective = choice(ADJECTIVES)
-	    noun = choice(NOUNS)
-	    token = ''.join(choice(tokenchars) for _ in range(tokenlength))
-
-	    sections = [adjective, noun, token]
-	    return delimiter.join(filter(None, sections))
-        return "%s-%s" % ('dv', 'dv')
+        return "%s-%s" % (adjective, noun)
 
 
     def __init__(self):
-        print("hello there")
-        nouns = [ "grass", "world" ]
-        adjectives = [ "green", "innocent" ]
 
+        with open('./nouns.txt') as nouns:
+            self.nouns = filter(len, map( lambda w: w.lower().strip(), nouns.readlines()))
+
+        with open('./adjectives.txt') as adjectives:
+            self.adjectives = filter(len, map( lambda w: w.lower().strip(), adjectives.readlines()))
 
 ng = NameGenerator()
 print(ng.get_name())
