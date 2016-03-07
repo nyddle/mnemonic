@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/env python
 from random import choice, seed as rseed
 
 class NameGenerator(object):
@@ -22,5 +22,8 @@ class NameGenerator(object):
         with open('./adjectives.txt') as adjectives:
             self.adjectives = filter(len, map( lambda w: w.lower().strip(), adjectives.readlines()))
 
-ng = NameGenerator()
-print(ng.get_name())
+
+if __name__ == "__main__":
+    ng = NameGenerator()
+    print(ng.get_name())
+
