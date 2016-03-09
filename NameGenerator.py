@@ -47,7 +47,7 @@ def name_is_free(name, r):
 def check_custom_name(name):
 
     if (not is_valid_name(name)):
-        return False
+        return None
     return re.sub("\s+", "-", name)
 
 

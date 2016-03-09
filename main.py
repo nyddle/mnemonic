@@ -40,7 +40,17 @@ class ShortenUrlHandler(tornado.web.RequestHandler):
 @route(r"/([\w+\-]+)") 
 class FollowLinkHandler(tornado.web.RequestHandler):
     def get(self, words):
-        self.write("FOLLOW: " + words)
+
+        resolved = None
+        normalized = check_custom_name(words)
+        if (normalized is not None):
+            resolved = r.get(normalized)
+            print(resolved)
+            if (resolved is not None):
+                self.write("FOLLOW: " + resolved)
+
+        if resolved is None:
+            raise tornado.web.HTTPError(404)
 
 
 if __name__ == "__main__":
