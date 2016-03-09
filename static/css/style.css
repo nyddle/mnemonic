@@ -1,0 +1,245 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+	height: 100%;
+	background: url("/static/images/header-bg2.jpg") center center no-repeat;
+}
+li{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 20px;
+}
+a{
+	color: #EF1D26;
+	text-decoration: none;
+}
+a:hover{
+	color: #CC0E14;
+}
+input[type='submit']{
+	border: none;
+	background: #EF1D26;
+	color: #fff;
+	font-size: 22px;
+	line-height: 120%;
+	padding: 12px 30px;
+	float: right;
+	height: 52px;
+	text-transform: uppercase;
+}
+input[type='submit']:hover{
+	background: #cc0e14;
+}
+.fl-r {
+  float: right;
+}
+.wrapper {
+	min-width: 1000px;
+	max-width: 1280px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url('/static/fonts/opensans-semibold-webfont.eot');
+  src: url('/static/fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'), 
+  url('/static/fonts/opensans-semibold-webfont.woff2') format('woff2'), 
+  url('/static/fonts/opensans-semibold-webfont.woff') format('woff'), 
+  url('/static/fonts/opensans-semibold-webfont.ttf') format('truetype'), 
+  url('/static/fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('/static/fonts/opensans-regular-webfont.eot');
+  src: url('/static/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+  url('/static/fonts/opensans-regular-webfont.woff2') format('woff2'), 
+  url('/static/fonts/opensans-regular-webfont.woff') format('woff'), 
+  url('/static/fonts/opensans-regular-webfont.ttf') format('truetype'), 
+  url('/static/fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sansbold';
+  src: url('/static/fonts/opensans-bold-webfont.eot');
+  src: url('/static/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), 
+  url('/static/fonts/opensans-bold-webfont.woff2') format('woff2'), 
+  url('/static/fonts/opensans-bold-webfont.woff') format('woff'), 
+  url('/static/fonts/opensans-bold-webfont.ttf') format('truetype'), 
+  url('/static/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sansextrabold';
+  src: url('/static/fonts/opensans-extrabold-webfont.eot');
+  src: url('/static/fonts/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'), 
+  url('/static/fonts/opensans-extrabold-webfont.woff2') format('woff2'), 
+  url('/static/fonts/opensans-extrabold-webfont.woff') format('woff'), 
+  url('/static/fonts/opensans-extrabold-webfont.ttf') format('truetype'), 
+  url('/static/fonts/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    border-bottom: 3px solid #EF1D26;
+    position: relative;
+}
+.logo-container{
+	display: none;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ffffff+100&0+0,0.32+100 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(255,255,255,0.32) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(255,255,255,0.32) 100%);  Chrome10-25,Safari5.1-6 
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,0.32) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#52ffffff',GradientType=0 ); /* IE6-9 */
+}
+.logo{
+	font: 30px/120% 'open_sansextrabold';
+	padding: 15px;
+}
+.logo i{
+	color: #82b93c;
+	display: inline-block;
+	margin: 0 3px;
+	font-weight: bold;
+}
+.logo a{
+	color: #fff;
+	font-style: italic;
+	text-decoration: none;
+}
+
+
+nav{
+	display: inline-block;
+	font: 18px/120% 'open_sanssemibold';
+	text-transform: uppercase;
+}
+nav a{
+	color: #000;
+	text-decoration: none;
+	display: block;
+	padding: 10px 0;
+}
+nav a:hover,
+nav .active a{
+	color: #EF1D26;
+	border-bottom: 3px solid #000;
+	margin-bottom: -3px;
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+	padding: 0 0px 47px;	
+	font: 18px/120% 'open_sansregular';
+}
+.head{
+	color: #fff;
+	text-align: center;
+	font: 24px/120% 'open_sansbold';
+	padding: 130px 0px 50px;
+}
+.head h1{
+    color: #000;
+    font-size: 70px;
+    line-height: 120%;
+    margin: 0 60px 30px;
+}
+.head div{
+	padding: 30px;
+	background: rgba(0,0,0,.3);
+}
+.container{
+	width: 760px;
+	padding: 30px;
+	margin: 0 auto;
+}
+.cf{
+	margin-bottom: 30px;
+}
+.cf:after{
+	clear: both;
+	content: '';
+	display: block;
+}
+
+.oh{
+	overflow: hidden;
+}
+.oh .shorten-input{
+	width: 100%;
+	border: none;
+	background: #fff;
+	font-size: 22px;
+	line-height: 120%;
+	padding: 13px 30px;
+	height: 52px;
+}
+.shortened_link{
+	background: #fff none repeat scroll 0 0;
+    padding: 30px;
+}
+.shortened_link > div{
+	margin-bottom: 10px;
+}
+.shortened_link a{
+	display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.shortened_link .unauth-title-url{
+	margin-bottom: 50px;
+}
+.unauth-title-url a{
+	font-size: 14px;
+	color: #bbb;
+}
+.unauth-title-url a:hover{
+	color: #aaa;
+}
+.short-url{
+	font: 22px/120% 'open_sanssemibold';
+}
+.fa-bar-chart-o{
+	width: 21px;
+	height: 15px;
+	display: inline-block;
+	background: url("/static/images/icon.png") center center no-repeat;	
+}
+
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	margin: -47px auto 0;
+	min-width: 1000px;
+	max-width: 1280px;
+	height: 47px;
+	position: relative;
+}
+.footer nav{
+	font-size: 14px
+}

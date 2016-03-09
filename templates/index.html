@@ -1,217 +1,79 @@
+<!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-    background-image: url(static/img/background.jpg);
-    background-size: 100%;
-    background-repeat:   no-repeat;
-    background-overflow: hidden;
-}
-#DIV_11 {
-    box-sizing: border-box;
-    color: rgb(163, 170, 174);
-    right: 0px;
-    width: 1276px;
-    perspective-origin: 638px 1566.98px;
-    transform-origin: 638px 1566.98px;
-    border: 0px none rgb(163, 170, 174);
-    font: normal normal 300 normal 15.6px / 24px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    outline: rgb(163, 170, 174) none 0px;
-}/*#DIV_11*/
-
-#DIV_12 {
-    box-sizing: border-box;
-    color: rgb(163, 170, 174);
-    height: 478px;
-    position: relative;
-    width: 1276px;
-    z-index: 1001;
-    perspective-origin: 638px 239px;
-    transform-origin: 638px 239px;
-    border: 0px none rgb(163, 170, 174);
-    font: normal normal 300 normal 15.6px / 24px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    outline: rgb(163, 170, 174) none 0px;
-}/*#DIV_12*/
-
-#DIV_13 {
-    box-sizing: border-box;
-    color: rgb(163, 170, 174);
-    height: 450px;
-    max-width: 920px;
-    min-height: 450px;
-    position: relative;
-    width: 920px;
-    perspective-origin: 460px 225px;
-    transform-origin: 460px 225px;
-    border: 0px none rgb(163, 170, 174);
-    font: normal normal 300 normal 15.6px / 24px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 28px 178px 0px;
-    outline: rgb(163, 170, 174) none 0px;
-    padding: 64px 0px;
-}/*#DIV_13*/
-
-#DIV_1 {
-    box-sizing: border-box;
-    color: rgb(163, 170, 174);
-    height: 60px;
-    position: relative;
-    text-align: center;
-    width: 763.594px;
-    perspective-origin: 381.797px 30px;
-    transform-origin: 381.797px 30px;
-    border: 0px none rgb(163, 170, 174);
-    font: normal normal 300 normal 15.6px / 24px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 0px 78.2031px 30px;
-    outline: rgb(163, 170, 174) none 0px;
-}/*#DIV_1*/
-
-#FORM_2 {
-    box-sizing: border-box;
-    color: rgb(163, 170, 174);
-    height: 60px;
-    text-align: center;
-    width: 763.594px;
-    perspective-origin: 381.797px 30px;
-    transform-origin: 381.797px 30px;
-    border: 0px none rgb(163, 170, 174);
-    font: normal normal 300 normal 15.6px / 24px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 0px;
-    outline: rgb(163, 170, 174) none 0px;
-}/*#FORM_2*/
-
-#FIELDSET_3 {
-    box-sizing: border-box;
-    color: rgb(163, 170, 174);
-    height: 60px;
-    position: relative;
-    text-align: center;
-    width: 759.594px;
-    perspective-origin: 379.797px 30px;
-    transform-origin: 379.797px 30px;
-    border: 0px none rgb(163, 170, 174);
-    font: normal normal 300 normal 15.6px / 24px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    outline: rgb(163, 170, 174) none 0px;
-    padding: 0px;
-}/*#FIELDSET_3*/
-
-#INPUT_4 {
-    box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px;
-    color: rgb(127, 137, 142);
-    height: 60px;
-    vertical-align: middle;
-    width: 759.594px;
-    perspective-origin: 379.797px 30px;
-    transform-origin: 379.797px 30px;
-    border: 1px inset rgb(127, 137, 142);
-    border-radius: 3px 3px 3px 3px;
-    font: normal normal 300 normal 18px / 32px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    outline: rgb(127, 137, 142) none 0px;
-    padding: 14.4px 23px;
-}/*#INPUT_4*/
-
-#INPUT_5 {
-    box-shadow: rgb(238, 97, 35) 0px 0px 0px 1px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: block;
-    height: 60px;
-    position: absolute;
-    right: 0px;
-    text-align: center;
-    text-rendering: optimizeLegibility;
-    text-transform: uppercase;
-    top: 0px;
-    vertical-align: middle;
-    white-space: pre;
-    width: 117.859px;
-    align-items: flex-start;
-    perspective-origin: 58.9219px 30px;
-    transform-origin: 58.9219px 30px;
-    background: rgb(238, 97, 35) none repeat scroll 0% 0% / auto padding-box border-box;
-    border: 0px none rgb(255, 255, 255);
-    border-radius: 0 3px 3px 0;
-    font: normal normal 500 normal 13px / 19.2px brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-    padding: 20.4px 28.8px;
-}/*#INPUT_5*/
-
-#INPUT_6, #INPUT_7, #INPUT_9 {
-    display: none;
-    height: auto;
-    vertical-align: middle;
-    width: auto;
-    perspective-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
-    border: 0px none rgb(0, 0, 0);
-    font: normal normal normal normal 15.6px / normal BlinkMacSystemFont;
-    padding: 0px;
-}/*#INPUT_6, #INPUT_7, #INPUT_9*/
-
-#INPUT_8 {
-    display: none;
-    height: auto;
-    vertical-align: middle;
-    width: auto;
-    perspective-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
-    border: 0px none rgb(0, 0, 0);
-    font: normal normal normal normal 15.6px / normal BlinkMacSystemFont;
-    padding: 0px;
-}/*#INPUT_8*/
-
-#DIV_10 {
-    box-sizing: border-box;
-    color: rgb(163, 170, 174);
-    display: none;
-    height: auto;
-    text-align: center;
-    width: auto;
-    perspective-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    border: 0px none rgb(163, 170, 174);
-    font: normal normal 300 normal 15.6px / 24px proxima-nova, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    outline: rgb(163, 170, 174) none 0px;
-}/*#DIV_10*/
-#H1_1 {
-    box-sizing: border-box;
-    color: rgb(255, 255, 255);
-    height: 56px;
-    text-align: center;
-    width: 920px;
-    border: 0px none rgb(255, 255, 255);
-    font: normal normal 500 normal 48px / 56px brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    outline: rgb(255, 255, 255) none 0px;
-}/*#H1_1*/
-</style>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="/static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-<div id="DIV_11">
-    <div id="DIV_12">
-        <div id="DIV_13">
-                <h1 id="H1_1">
-                    MEASURE. SHARE.
-                </h1>
-            <div id="DIV_1">
-                <form method="POST" action="/shorten_url" name="shorten_url" id="FORM_2">
-                    <fieldset id="FIELDSET_3">
-                        <input id="INPUT_4" name="url" type="text" placeholder="Paste a link to shorten it" />
-                        <input id="INPUT_5" type="submit" value="Shorten" />
-                        <input type="hidden" name="basic_style" value="1" id="INPUT_6" />
-                        <input type="hidden" name="classic_mode" id="INPUT_7" />
-                        <!-- allow rapid shorten -->
 
-                        <input type="hidden" name="rapid_shorten_mode" id="INPUT_8" />
-                        <input type="hidden" name="_xsrf" value="39b3074eeddc4132befd4c79ab56b10e" id="INPUT_9" />
-                    </fieldset>
-                </form>
-                <div id="DIV_10">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="wrapper">
+
+	<!-- <header class="header">
+		<div class="logo-container">
+			<div class="logo">
+				<a href="#">Your<i>/</i>logo</a>
+			</div>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">dolor sit amet</a></li>
+				<li><a href="#">consectetur</a></li>
+				<li><a href="#">adipisicing</a></li>
+				<li><a href="#">incididunt</a></li>
+			</ul>
+		</nav>
+	</header> --><!-- .header-->
+
+	<main class="content">
+		<div class="head">
+			<h1 class="page-title t-center">SHORTEN. SHARE. MEASURE.</h1>
+			<div class="join-bitly t-center">Sed placerat accumsan ligula. Aliquam felis magna, congue quis, tempus eu, aliquam vitae, ante.</div>
+		</div>
+		<div class="container">
+			<form class="cf">
+				<input class="button" type="submit" value="Shorten">
+				<div class="oh">
+					<input id="shorten_url" class="shorten-input" type="text" value="http://bit.ly/1TFGCGp" placeholder="Paste a link to shorten it" name="url" taborder="1">
+				</div>
+			</form>
+			<div class="shortened_link">
+				<div class="unauth-title">
+					<a href="https://wallpaperscraft.com/image/notebook_desk_silhouette_people_glass_73394_800x600.jpg" class="article-title">https://wallpaperscraft.com/image/notebook_desk_silhouette_people_glass_73394_800x600.jpg</a>
+				</div>
+				<div class="unauth-title-url">
+					<a href="https://wallpaperscraft.com/image/notebook_desk_silhouette_people_glass_73394_800x600.jpg" class="article-title smaller">https://wallpaperscraft.com/image/notebook_desk_silhouette_people_glass_73394_800x600.jpg</a>
+				</div>
+				<div class="unauth_capsule clearfix">
+					<div class="fl-r">						
+						<a href="#" class="info_page"> 0
+							<i class="fa-bar-chart-o"></i>
+						</a>
+					</div>
+					<a href="http://bit.ly/1TFGCGp" class="short-url oh">http://bit.ly/1TFGCGp</a>
+				</div>
+			</div>
+		</div>		
+	</main><!-- .content -->
+
+</div><!-- .wrapper -->
+
+<footer class="footer">
+	<nav>
+		<ul>
+			<li class="active"><a href="#">Lorem ipsum</a></li>
+			<li><a href="#">dolor sit amet</a></li>
+			<li><a href="#">consectetur</a></li>
+			<li><a href="#">adipisicing</a></li>
+			<li><a href="#">incididunt</a></li>
+		</ul>
+	</nav>
+</footer><!-- .footer -->
+
 </body>
 </html>
