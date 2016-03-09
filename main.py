@@ -24,6 +24,10 @@ class IndexHandler(tornado.web.RequestHandler):
 @route(r"/shorten_url") 
 class ShortenUrlHandler(tornado.web.RequestHandler):
     def post(self):
+	"""
+        ip = self.request.remote_ip)
+        tries = r.get(ip)
+	"""
 
         name = self.get_argument('url', default=None, strip=True)
         shortened = make_unique_name(name, ng, r)
