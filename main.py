@@ -5,6 +5,8 @@ import tornado.web
 from tornroutes import route
 from jinja2 import Environment, FileSystemLoader
 
+import json
+
 from NameGenerator import *
 
 
@@ -23,9 +25,12 @@ class ShortenUrlHandler(tornado.web.RequestHandler):
     def post(self):
 
         name = self.get_argument('url', default=None, strip=True)
-        n = make_unique_name(name, ng, r)
+        shortened = make_unique_name(name, ng, r)
 
-        return self.write("OK")
+        if shortened is not None:
+            return self.write(json.dumps({ "original" : name, "shortened" : shortened }))
+        else:
+            return self.write(json.dumps({ "error" : "smth went wrong" }))
 
 
 @route(r"/([\w+\-]+)") 
