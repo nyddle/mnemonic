@@ -48,10 +48,9 @@ class FollowLinkHandler(tornado.web.RequestHandler):
             resolved = r.get(normalized)
             print(resolved)
             if (resolved is not None):
-                self.write("FOLLOW: " + resolved)
+                self.redirect(resolved)
 
-        if resolved is None:
-            raise tornado.web.HTTPError(404)
+        raise tornado.web.HTTPError(404)
 
 
 if __name__ == "__main__":
