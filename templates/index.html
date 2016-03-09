@@ -7,6 +7,7 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link href="/static/css/style.css" rel="stylesheet">
+    <script src="/static/js/jquery-1.12.1.min.js"></script>
 </head>
 
 <body>
@@ -36,10 +37,10 @@
 			<div class="join-bitly t-center">Sed placerat accumsan ligula. Aliquam felis magna, congue quis, tempus eu, aliquam vitae, ante.</div>
 		</div>
 		<div class="container">
-			<form class="cf">
-				<input class="button" type="submit" value="Shorten">
+			<form class="cf" action="/shorten_url">
+				<input id="submit" class="button" type="submit" value="Shorten">
 				<div class="oh">
-					<input id="shorten_url" class="shorten-input" type="text" value="http://bit.ly/1TFGCGp" placeholder="Paste a link to shorten it" name="url" taborder="1">
+					<input id="shorten_url" class="shorten-input" type="text" value="http://bit.ly/1TFGCGp" placeholder="Paste a link to shorten it" name="url" taborder="1" oninput="enableform()">
 				</div>
 			</form>
 			<div class="shortened_link">
@@ -74,6 +75,25 @@
 		</ul>
 	</nav>
 </footer><!-- .footer -->
+
+<script>
+    function enableform() {
+        $("#submit").prop('disabled', false);
+    }
+
+    $(document).ready(function() {
+        $('form[class=cf]').submit(function(){
+            $.post($(this).attr('action'), $(this).serialize(), function(res){
+                var result = JSON.parse(res);
+                $("#submit").prop('disabled', true);
+                $("#shorten_url").val("http://" + window.location.host + "/" + result.shortened);
+                $("#shorten_url").select();
+            });
+
+            return false; // prevent default action
+        });
+    });
+</script>
 
 </body>
 </html>

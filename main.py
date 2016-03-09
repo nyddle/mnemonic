@@ -12,6 +12,7 @@ from NameGenerator import *
 
 templates = Environment(loader=FileSystemLoader('templates'))
 r = redis.StrictRedis(host='localhost', port=6379, db=0)
+r = redis.StrictRedis(host='95.85.22.116', port=6379, db=0)
 ng = NameGenerator()
 
 @route(r"/")
