@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import os
+
 import tornado.ioloop
 import tornado.web
 from tornroutes import route
@@ -57,8 +59,8 @@ if __name__ == "__main__":
     routes = route.get_routes()
     routes.append((r"/static/(.*)", tornado.web.StaticFileHandler, 
                 {"path": "static"}))
-
+    port = int(os.environ.get("PORT", 8888))
     app = tornado.web.Application(route.get_routes())
-    app.listen(8888)
+    app.listen(port)
     tornado.ioloop.IOLoop.current().start()
 
