@@ -13,8 +13,8 @@ from NameGenerator import *
 
 
 templates = Environment(loader=FileSystemLoader('templates'))
-r = redis.StrictRedis(host='localhost', port=6379, db=0)
-r = redis.StrictRedis(host='95.85.22.116', port=6379, db=0)
+redis_url = os.getenv('REDISTOGO_URL', 'redis://localhost:6379')
+r = redis.from_url(redis_url)
 ng = NameGenerator()
 
 @route(r"/")
