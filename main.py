@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 
 import os
+import json
 
 import tornado.ioloop
 import tornado.web
 from tornroutes import route
 from jinja2 import Environment, FileSystemLoader
-
-import json
 
 from NameGenerator import *
 
@@ -16,6 +15,7 @@ templates = Environment(loader=FileSystemLoader('templates'))
 redis_url = os.getenv('REDISTOGO_URL', 'redis://localhost:6379')
 r = redis.from_url(redis_url)
 ng = NameGenerator()
+
 
 @route(r"/")
 class IndexHandler(tornado.web.RequestHandler):
@@ -38,6 +38,13 @@ class ShortenUrlHandler(tornado.web.RequestHandler):
             return self.write(json.dumps({ "original" : name, "shortened" : shortened }))
         else:
             return self.write(json.dumps({ "error" : "smth went wrong" }))
+
+
+@route(r"/wazzup") 
+class WazzUpHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.set_header("Content-Type", "text/ plain") 
+        self.write(json.dumps(r.info(), indent=4))
 
 
 @route(r"/([\w+\-]+)") 
