@@ -239,7 +239,12 @@ nav .active a{
 	max-width: 1280px;
 	height: 47px;
 	position: relative;
+    text-align: center;
+	font-size: 18px;
+    font-weight: bold;
+    color: black;
 }
-.footer nav{
-	font-size: 14px
+
+.footer a {
+    color: white;
 }
